@@ -14,7 +14,7 @@ Copy `downloadAll.js` to your [Spicetify](https://github.com/spicetify/spicetify
 | :--------------- | :------------------------------------------------------------------------------------- |
 | **Linux** 🐧 | `~/.config/spicetify/Extensions` or `$XDG_CONFIG_HOME/.config/spicetify/Extensions/` |
 | **MacOS** 🍎 | `~/.config/spicetify/Extensions` or `$SPICETIFY_CONFIG/Extensions`                   |
-| **Windows** 🪟 | `%appdata%/spicetify/Extensions/`                                                  |
+| **Windows** 🖼️ | `%appdata%/spicetify/Extensions/`                                                  |
 
 After placing the extension file in the correct folder, run the following command to install it:
 
