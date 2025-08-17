@@ -1,6 +1,6 @@
 {
   "name": "Download All",
-  "description": "Adds a smart, reactive button to download all playlists from your library.",
+  "description": "Adds a smart, reactive button to download all playlists from your library. !NEED PREMIUM!",
   "preview": "screenshot.png",
   "main": "downloadAll.js",
   "readme": "README.md",
@@ -15,6 +15,7 @@
     "download",
     "library",
     "offline",
+    "premium",
     "utility"
   ]
 }
