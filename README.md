@@ -22,6 +22,8 @@ After placing the extension file in the correct folder, run the following comman
 
 ```bash
 spicetify config extensions downloadAll.js
+```
+```bash
 spicetify apply
 ```
 
