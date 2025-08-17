@@ -1,10 +1,10 @@
-/** @name         Spicetify Download All
-/** @description  Adds a reactive button to download all playlists in the Spotify library.
-/** @author       zKauaFerreira
-/** @version      1.0.8
-/** @date         16/08/2025 
-*/
-
+/**
+ * @name         Spicetify Download All
+ * @description  Adds a reactive button to download all playlists in the Spotify library.
+ * @author       zKauaFerreira
+ * @version      1.0.9
+ * @date         16/08/2025
+ */
 
 (function DownloadAllExtension() {
     if (!Spicetify.Platform || !Spicetify.showNotification || !Spicetify.Tippy) {
@@ -43,7 +43,8 @@
     }
 
     async function getMissingPlaylists() {
-        const downloadedItems = await Spicetify.Platform.OfflineAPI.getDownloads();
+        // CORREÇÃO: Garante que `downloadedItems` seja sempre uma lista, mesmo que a API falhe.
+        const downloadedItems = (await Spicetify.Platform.OfflineAPI.getDownloads()) || [];
         const downloadedSet = new Set(downloadedItems.map(item => item.uri));
         
         const rootlists = await Spicetify.Platform.RootlistAPI.getContents();
@@ -55,10 +56,15 @@
     async function checkLibraryAndSetButtonVisibility(btn) {
         if (!btn) return;
 
-        const missingPlaylists = await getMissingPlaylists();
-        const needsToShowButton = missingPlaylists.length > 0;
-        
-        btn.style.display = needsToShowButton ? 'flex' : 'none';
+        try {
+            const missingPlaylists = await getMissingPlaylists();
+            const needsToShowButton = missingPlaylists.length > 0;
+            
+            btn.style.display = needsToShowButton ? 'flex' : 'none';
+        } catch (err) {
+            console.error("[DownloadAll] Error during visibility check:", err);
+            btn.style.display = 'none'; // Esconde o botão em caso de erro.
+        }
     }
 
     async function createReactiveDownloadButton(container) {
