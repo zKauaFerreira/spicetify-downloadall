@@ -1,0 +1,20 @@
+{
+  "name": "Download All",
+  "description": "Adds a smart, reactive button to download all playlists from your library.",
+  "preview": "screenshot.png",
+  "main": "downloadAll.js",
+  "readme": "README.md",
+  "branch": "main",
+  "authors": [
+    {
+      "name": "zKauaFerreira",
+      "url": "https://github.com/zKauaFerreira"
+    }
+  ],
+  "tags": [
+    "download",
+    "library",
+    "offline",
+    "utility"
+  ]
+}
