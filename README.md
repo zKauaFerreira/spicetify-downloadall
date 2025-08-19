@@ -2,7 +2,7 @@
 
 > ⚠️ **Please Note:** A **Spotify Premium** subscription is required for this extension to work, as the download feature is a Premium-only benefit.
 
-A [Spicetify](https://github.com/spicetify/spicetify-cli) extension to add an intelligent "Download All" button to your library.
+A [Spicetify](https://spicetify.app/) extension to add an intelligent "Download All" button to your library.
 
   * 🧠 **Smart Button:** The button only appears if there are playlists in your library that haven't been downloaded yet.
   * 📚 **Complete Coverage:** Downloads **all** visible playlists in your library, including those inside folders and playlists from other users that you've saved.
@@ -10,7 +10,7 @@ A [Spicetify](https://github.com/spicetify/spicetify-cli) extension to add an in
 
 ## ⚙️ Installation
 
-Copy `downloadAll.js` to your [Spicetify](https://github.com/spicetify/spicetify-cli) extensions directory:
+Copy `downloadAll.js` to your [Spicetify](https://spicetify.app/) extensions directory:
 
 | **Platform** 💻 | **Path** 📁 |
 | :--------------- | :------------------------------------------------------------------------------------- |
